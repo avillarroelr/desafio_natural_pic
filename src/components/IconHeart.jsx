@@ -1,8 +1,11 @@
-const IconHeart = ({ filled }) => {
+const IconHeart = ({ filled, onClick }) => {
+  // se modifica Iconheart para pasarle onclick pasar la logica de marcado o desmarcado 
   return (
     <svg
       width="40px"
       viewBox="0 0 24 24"
+      onClick={onClick} 
+      style={{ cursor: 'pointer' }}
     >
       <path
         fill={filled ? "red" : "white"}
@@ -11,4 +14,5 @@ const IconHeart = ({ filled }) => {
     </svg>
   );
 };
+
 export default IconHeart;
